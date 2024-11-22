@@ -1,0 +1,25 @@
+[package]
+name = "vanity-did-plc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde_ipld_dagcbor = { git = "https://github.com/ipld/serde_ipld_dagcbor.git" }
+serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
+base64 = "0.22"
+base32 = "0.5.1"
+ethnum = { version = "1", features = ["serde"] }
+hex = "0.4"
+reqwest = { version = "0.12.8", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+serde_json = "1.0.132"
+memmem = "0.1"
+num_cpus = "1"
+clap = { version = "4.5", features = ["derive"] }
+rand = "0.8"
+regex = "1"
+parking_lot = "0.12"
+
+[profile.release]
+debug = true
